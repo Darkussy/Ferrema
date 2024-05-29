@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-z$#q2*vj&ka36648=9ms*65prznqtplzu$hi@i!4_=%n69*90#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -79,12 +79,26 @@ WSGI_APPLICATION = 'Ferremax.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 '''
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME":"Ferreteria",
+        "USER":"root",
+        "PASSWORD":"admin",
+        "HOST":"localhost",
+        "PORT":"3306",
+    }
+}'''
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME":"railway",
+        "USER":"root",
+        "PASSWORD":"fmCWuparBRynYfZrtuTkqGwlcPaqcoky",
+        "HOST":"monorail.proxy.rlwy.net",
+        "PORT":"46933",
     }
 }
-
+'''
 
 DATABASES = {
     "default": {
@@ -98,7 +112,7 @@ DATABASES = {
 }
 '''
 '''
-este es el ejemplo que ocupo '''
+este es el ejemplo que ocupo de oracle  
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
@@ -112,7 +126,7 @@ DATABASES = {
         },
     },
 }
-
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
