@@ -169,7 +169,9 @@ LOGOUT_REDIRECT_URL= reverse_lazy('Index')
 
 STATIC_URL = '/Static/'
 
-STATICFILES_DIRS = (os.path.join(BASE_DIR,'Static'),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR,'Ferreteria/Static'),)
+
+STATIC_ROOT = os.path.join(BASE_DIR,'Staticfiles')
 
 MEDIA_ROOT=os.path.join(BASE_DIR,'Media')
 
