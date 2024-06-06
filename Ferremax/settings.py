@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-z$#q2*vj&ka36648=9ms*65prznqtplzu$hi@i!4_=%n69*90#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -88,6 +88,8 @@ DATABASES = {
         "PORT":"3306",
     }
 }'''
+"mysql://root:VGJHCCxtHkGyKVugIoQTHTLyHdVrsOpf@roundhouse.proxy.rlwy.net:48901/railway"
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
@@ -180,3 +182,5 @@ REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
 }
 '''
+
+ALLOWED_HOSTS= ['localhost','ferrema-production.up.railway.app']
